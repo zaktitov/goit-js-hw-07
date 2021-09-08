@@ -7,8 +7,8 @@ const input = document.getElementById(`name-input`);
 input.addEventListener(`input`, onInputChange);
 
 function onInputChange(event) {
-  if (event.currentTarget.value === null) {
+  if (event.value === " ") {
     span.textContent = "незнакомец";
-  } else{span.textContent = event.currentTarget.value;}
-  
+  };
+  span.textContent = event.currentTarget.value;
   }
