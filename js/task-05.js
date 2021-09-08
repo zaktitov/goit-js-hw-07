@@ -4,11 +4,8 @@
 
 const span = document.getElementById(`name-output`);
 const input = document.getElementById(`name-input`);
-input.addEventListener(`input`, onInputChange);
-
-function onInputChange(event) {
-  if (event.value === " ") {
-    span.textContent = "незнакомец";
-  };
-  span.textContent = event.currentTarget.value;
-  }
+input.addEventListener(`input`, input =>
+  input.value === null
+    ? (span.textContent = `незнакомец`)
+    : (span.textContent = input.currentTarget.value)
+);

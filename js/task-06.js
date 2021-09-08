@@ -9,9 +9,15 @@
 
 const input = document.getElementById(`validation-input`);
 const data = input.dataset.length;
-console.log(data);
 
-input.addEventListener(`blur`, () => {
-  if (input.value.length != data ) {input.classList.toggle(`invalid`) } else {input.classList.toggle(`valid`)
+input.addEventListener(`blur`, onBlur);
+
+function onBlur() {
+  if (input.value.length !== Number(data)) {
+    input.classList.remove(`valid`);
+    input.classList.add(`invalid`);
+  } else {
+    input.classList.add(`valid`);
+    input.classList.remove(`invalid`);
   }
-});
+}
