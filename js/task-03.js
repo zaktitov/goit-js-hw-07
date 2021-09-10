@@ -28,7 +28,7 @@ gallery.style.display = "flex";
 gallery.style.justifyContent = "space-around";
 gallery.style.listStyle = "none"
 
-const imagesMap = images.map(element => (`<li class="gallery__item"><img src=${element.url} alt=${element.alt} width=300;></li>`)).join("");
+const imagesMap = images.map(element =>(`<li class="gallery__item"><img src="${element.url}" alt="${element.alt}" width=300;></li>`)).join("");
 gallery.insertAdjacentHTML("afterbegin", imagesMap);
 console.log(gallery);
 
